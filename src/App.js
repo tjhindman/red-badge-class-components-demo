@@ -8,9 +8,9 @@ function App() {
     <div className="App">
       <img src={goldStar} alt="Gold Star" />
       <h1>Hello Gold Star Counter!</h1>
-      <Counter name="Paul" />
-      <Counter name="Adam" />
-      <Counter name="TJ" />
+      <Counter name="Paul" count={50} status="Like a boss" />
+      <Counter name="Adam" count={500} status="I'm cool" />
+      <Counter name="TJ" status="Stressin'" />
     </div>
   );
 }
