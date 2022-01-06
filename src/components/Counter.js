@@ -30,6 +30,7 @@ class Counter extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     // after previous props or state have been changed
+    // need "if" comparison of "prevState/prevProps" surrounding "update" logic
     if (prevState.count !== this.state.count) {
       if (this.state.count === 0) {
         this.setState({
@@ -44,7 +45,9 @@ class Counter extends React.Component {
   }
 
   componentWillUnmount() {
-    // after component is taken from page view
+    // right before component is taken from page view
+    // typically used for clean up functions: clearInterval(), cleaning up subscriptions,
+    // cancelling network requests, etc.
     console.log(`Goodbye ${this.props.name}!`);
   }
 
